@@ -1,2 +1,2 @@
 
-![Network](./images/Network Week 1 _1.png)
+![Network](./images/Network Week 1_1.png)
