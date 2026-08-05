@@ -1,3 +1,3 @@
 
-![Network](./image/Network Week 1_1.png)
+![Network](./image/Network_Week_1_1.png)
 ..
