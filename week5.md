@@ -205,3 +205,117 @@ net.ipv4.ip_forward=0
 Figure 10: Host3 IP address and forwarding configuration
 
 ## Testing Communication Between Different Subnets
+
+After establishing all devices, I tested the connectivity between Host1 and Host3.
+
+The command given was:
+
+ping -c 3 10.1.2.2
+
+The ping succeeded and returned:
+
+Three packets were sent.
+Received 3 packets with 0% loss.
+
+Figure 11: Successful ping from a host on the 10.1.1.0/24 subnet to a host on the 10.1.2.0/24 subnet
+
+This indicated that Router1 had properly redirected traffic across the two networks.
+
+## Viewing the Routing Table
+
+The routing table was shown as follows:
+
+ip route show
+
+On Router1, the routing table had two directly linked networks:
+
+10.1.1.0/24 dev eth0 scope link src 10.1.1.1
+10.1.2.0/24 dev eth1 scope link src 10.1.2.1
+
+Figure 12: Router1 routing table showing its two directly connected subnets
+
+This demonstrated that Router1 understood that the 10.1.1.0/24 network was available via eth0, whereas 10.1.2.0/24 was accessible via eth1.
+
+## Task 2 – Dynamic Routing with OSPF
+
+### OSPF Network Topology
+
+The second half of the Week 5 practical covered Open Shortest Path First (OSPF) using FRRouting.
+
+The provided network included:
+
+- Host1
+- Host2
+- FRR-1
+- FRR-2
+- FRR-3
+- FRR-4
+- NETem1
+- NETem2
+
+Figure 13: OSPF topology containing four FRR routers and two possible paths between Host1 and Host2
+
+The network included six IPv4 networks:
+
+A: 10.10.1.0/24
+B: 10.10.2.0/24
+C: 10.10.3.0/24
+D: 10.10.4.0/24
+E: 10.10.5.0/24 
+F: 10.10.6.0/24
+
+There were two potential pathways between Host1 and Host2:
+
+Upper Path:
+
+From Host1 to FRR-1, FRR-2, NETem1, FRR-4, and Host2.
+
+Lower Path:
+
+From Host1 to FRR-1, FRR-3, NETem2, FRR-4, and Host2.
+
+This redundant architecture enabled OSPF to choose a suitable route and immediately switch pathways if a link went unavailable.
+
+## Verifying Host Addresses
+
+### Host1
+
+Host1 was setup as follows:
+
+10.10.1.101/24
+
+Figure 14: Host1 configured on the 10.10.1.0/24 network
+
+### Host2
+
+Host 2 was configured with:
+
+10.10.6.102/24
+
+Figure 15: Host2 configured on the 10.10.6.0/24 network\
+
+## Accessing FRRouting
+
+The FRR command-line interface was launched using:
+
+vtysh
+
+The router subsequently displayed:
+
+Hello, this is FRRouting version 8.2.2.
+
+The prompt changed to:
+
+frr#
+
+Figure 16: Accessing the FRRouting command-line interface using vtysh
+
+The FRR interface supports routing-specific instructions that differ from regular Linux commands.
+
+The CLI might be exited with:
+
+exit
+
+Figure 17: Exiting the FRRouting command-line environment
+
+## Testing End-to-End Connectivity
