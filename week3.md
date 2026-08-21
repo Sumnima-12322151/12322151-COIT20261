@@ -239,3 +239,36 @@ This practical highlighted a significant gap between ping and Netcat.
 | ---- | ------------ | ------------- |
 | ping |	Test basic network reachability and delay	| ICMP |
 | Netcat (nc) |	Test application communication between hosts |	TCP/UDP |
+
+A successful ping proves that fundamental IP communication is operating, but a successful Netcat connection shows that communication may take place over a specific application port.
+
+Using both programs gives additional information for evaluating or troubleshooting network connectivity.
+
+## What I Learned
+
+During the Week 3 practical, I learnt how:
+- Validate communication across several Linux hosts
+- Ping is a network-layer connection testing tool
+- Interpret the packet loss and round-trip time
+- Understand the distinction between ICMP and application communication
+- Use Netcat as a basic server
+- Use Netcat as the client
+- Connect two Linux hosts using their IP addresses and port numbers
+- Send text messages to network hosts
+- Understand the significance of TCP/UDP port numbers
+- Begin and terminate packet captures in GNS3
+- Capture traffic that passes across a certain network link
+- Open network capture files using Wireshark
+- Identify ARP and ICMP packets with Wireshark
+- Identify the ICMP Echo Request and Echo Reply packets
+- Learn how packet capture may help with network troubleshooting and analysis
+
+## Conclusion
+
+The Week 3 practical offered hands-on experience with application communication and packet capture. The four Linux hosts were successfully linked via Ethernet switch, and ICMP connection tests revealed 0% packet loss between the tested devices.
+
+Netcat was then used to establish client-server connection and send text between Linux machines. This highlighted the distinction between fundamental network reachability with ping and application-level communication with Netcat.
+
+Finally, packet capture was carried out on the connection between Host1 and Switch1. Wireshark was used to inspect the collected traffic, which included ARP and ICMP packets. This exercise gave an excellent introduction to packet-level network analysis and demonstrated how GNS3 and Wireshark can operate together for network testing and troubleshooting.
+
+Link to week3.md file: 
