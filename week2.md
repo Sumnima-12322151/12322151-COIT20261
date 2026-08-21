@@ -318,3 +318,5 @@ The Week 2 practical gave participants hands-on experience with IPv4 configurati
 Static addresses were configured using a variety of methods, including the GNS3 configuration interface, the /etc/network/interfaces file, and the Linux ip address add command. Ping connectivity tests verified effective communication between appropriately configured hosts, however pinging an unused address resulted in Destination Host Unreachable and packet loss.
 
 Overall, this exercise increased my knowledge of Linux network settings, IPv4 addressing, ICMP, packet loss, and round-trip time.
+
+Link to week2.md file: https://github.com/Sumnima-12322151/12322151-COIT20261/blob/main/week2.md
