@@ -271,4 +271,4 @@ Netcat was then used to establish client-server connection and send text between
 
 Finally, packet capture was carried out on the connection between Host1 and Switch1. Wireshark was used to inspect the collected traffic, which included ARP and ICMP packets. This exercise gave an excellent introduction to packet-level network analysis and demonstrated how GNS3 and Wireshark can operate together for network testing and troubleshooting.
 
-Link to week3.md file: 
+Link to week3.md file: https://github.com/Sumnima-12322151/12322151-COIT20261/blob/main/week3.md
