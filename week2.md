@@ -19,3 +19,5 @@ For this challenge, I developed a GNS3 network that includes:
 - A single Ethernet switch
 
 Initially, the devices were integrated into the GNS3 workspace.
+
+Figure 1: Four Linux hosts and one Ethernet switch added to the GNS3 project.
