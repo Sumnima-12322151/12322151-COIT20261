@@ -20,7 +20,7 @@ During this practical session, I accomplished the following tasks:
 
 The screenshot below depicts the GNS3 project, which includes Host1. The host was successfully added to the topology and started, as seen by the green status signal.
 
-![Network](./image/Week 1/GNS3_topology_containing_a_Linux_Host_named_Host1.png)
+![Network](./image/Week_1/GNS3_topology_containing_a_Linux_Host_named_Host1.png)
 
 Figure 1: GNS3 topology containing a Linux Host named Host1
 
@@ -32,7 +32,7 @@ ip a
 
 This program displays the list of accessible network interfaces together with their IP settings.
 
-![Network](./image/Host1_console_displaying_its_network_interface_and_IP_address.png)
+![Network](./image/Week_1/Host1_console_displaying_its_network_interface_and_IP_address.png)
 
 Figure 2: Host1 console displaying its network interface and IP address
 
