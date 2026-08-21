@@ -21,9 +21,7 @@ During this practical session, I accomplished the following tasks:
 The screenshot below depicts the GNS3 project, which includes Host1. The host was successfully added to the topology and started, as seen by the green status signal.
 
 ![Network](./image/GNS3_topology_containing_a_Linux_Host_named_Host1.png)
-
-**Figure 1: GNS3 topology containing a Linux Host named Host1
-**
+Figure 1: GNS3 topology containing a Linux Host named Host1
 
 
 ![Network](./image/Network_Week_1_2.png)
