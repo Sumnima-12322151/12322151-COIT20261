@@ -20,7 +20,7 @@ Host1, Host2, Host3, Router1, and Switch1
 
 Hosts 1 and 2 were linked to the Ethernet switch. The switch connected to Router1 via eth0, but Host3 connected directly to Router1 via eth1.
 
-[](./image/Week_5/GNS3_topology_consisting_of_three_Linux_hosts_one_Ethernet_switch_and_one_Linux_router.png)
+![Network](./image/Week_5/GNS3_topology_consisting_of_three_Linux_hosts_one_Ethernet_switch_and_one_Linux_router.png)
 
 Figure 1: GNS3 topology consisting of three Linux hosts, one Ethernet switch, and one Linux router
 
