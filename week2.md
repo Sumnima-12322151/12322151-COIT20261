@@ -21,3 +21,25 @@ For this challenge, I developed a GNS3 network that includes:
 Initially, the devices were integrated into the GNS3 workspace.
 
 Figure 1: Four Linux hosts and one Ethernet switch added to the GNS3 project.
+
+The four hosts were then linked to the Ethernet switch via their respective eth0 ports. This resulted in a basic LAN in which all devices could interact via the switch.
+
+Figure 2: Completed GNS3 LAN topology with all four hosts connected to Switch1.
+
+### IP Addressing Scheme
+
+The network utilised the following IPv4 subnet:
+
+10.1.1.0/24
+
+The Subnet Mask was:
+
+255.255.255.0
+
+The hosts were given addresses from this network.
+
+| Device |	| IP Address |	| Subnet |
+| Host1 |	| 10.1.1.1 |	| /24 |
+| Host2 |	| 10.1.1.2 |	| /24 |
+| Host3 |	| 10.1.1.3 |	| /24 |
+| Host4 |	| 10.1.1.4 |	| /24 |
