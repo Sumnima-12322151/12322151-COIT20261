@@ -21,8 +21,20 @@ During this practical session, I accomplished the following tasks:
 The screenshot below depicts the GNS3 project, which includes Host1. The host was successfully added to the topology and started, as seen by the green status signal.
 
 ![Network](./image/GNS3_topology_containing_a_Linux_Host_named_Host1.png)
+
 Figure 1: GNS3 topology containing a Linux Host named Host1
 
+## Checking the IP Address
 
-![Network](./image/Network_Week_1_2.png)
+After running Host1, I opened its console and typed the following Linux command.
+
+ip a
+
+This program displays the list of accessible network interfaces together with their IP settings.
+
+![Network](./image/Host1_console_displaying_its_network_interface_and_IP_address.png)
+
+Figure 2: Host1 console displaying its network interface and IP address
+
+
 
