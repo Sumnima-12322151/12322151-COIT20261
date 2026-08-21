@@ -440,3 +440,5 @@ Host1 was a Firefox-based HTTP client that could be accessed via a graphical env
 The packet captures were then inspected with Wireshark. The captures included numerous network protocols, such as ARP, ICMP, TCP, and ICMPv6. TCP SYN packets sent to port 80 displayed an attempt to connect to an HTTP server, but TCP retransmissions showed what happens when the expected response is not obtained.
 
 Overall, the exercise increased my knowledge of IPv4 routing, HTTP client-server communication, TCP, packet captures, Wireshark, VNC, and command-line networking tools.
+
+Link to week4.md file: https://github.com/Sumnima-12322151/12322151-COIT20261/blob/main/week4.md
