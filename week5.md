@@ -703,3 +703,5 @@ The first job was connecting two IPv4 subnets using a Linux router. Static IP ad
 The second task involved examining a bigger redundant network utilising OSPF and FRRouting. FRR commands like show ip ospf neighbour, show ip ospf route, and show ip route were used to look at neighbour relationships and dynamically learnt routes.
 
 Finally, traceroute illustrated one of the key benefits of dynamic routing. Initially, traffic followed the higher route via FRR-2. When that path became unavailable, OSPF recalculated the network and rerouted traffic via FRR-3. This showed how dynamic routing methods enhance network resilience by automatically responding to topology changes.
+
+Link to week5.md file: https://github.com/Sumnima-12322151/12322151-COIT20261/blob/main/week5.md
