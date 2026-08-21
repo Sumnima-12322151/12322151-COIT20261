@@ -20,6 +20,8 @@ For this challenge, I developed a GNS3 network that includes:
 
 Initially, the devices were integrated into the GNS3 workspace.
 
+![Network](./image/Week_2/Four_Linux_hosts_and_one_Ethenet_switch_added_to_the_GNS3_project.png)
+
 Figure 1: Four Linux hosts and one Ethernet switch added to the GNS3 project
 
 The four hosts were then linked to the Ethernet switch via their respective eth0 ports. This resulted in a basic LAN in which all devices could interact via the switch.
