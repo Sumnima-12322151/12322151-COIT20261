@@ -64,3 +64,5 @@ During this activity, I learned:
 ## Conclusion
 
 The Week 1 exercise was an introduction to using GNS3 for network simulation. I successfully constructed a basic topology with one Linux server, entered its console, and confirmed that the eth0 interface was using the IP address 192.168.0.42/24. This practical practice helps to develop the fundamental GNS3 and Linux networking abilities necessary for the next networking exercises.
+
+Link to week1.md file: https://github.com/Sumnima-12322151/12322151-COIT20261/blob/main/week1.md
