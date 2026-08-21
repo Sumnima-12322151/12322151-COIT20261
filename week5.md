@@ -20,7 +20,7 @@ Host1, Host2, Host3, Router1, and Switch1
 
 Hosts 1 and 2 were linked to the Ethernet switch. The switch connected to Router1 via eth0, but Host3 connected directly to Router1 via eth1.
 
-![Network](./image/Week_1/GNS3_topology_containing_a_Linux_Host_named_Host1.png)
+![Network](./image/Week_5/GNS3_topology_consisting_of_three_Linux_hosts_one_Ethernet_switch_and_one_Linux_router.png)
 
 Figure 1: GNS3 topology consisting of three Linux hosts, one Ethernet switch, and one Linux router
 
@@ -70,6 +70,8 @@ gateway 10.1.1.1
 
 up sysctl net.ipv4.ip_forward=0
 
+![Network](./image/Week_5/Static_IPv4_configuration_for_Host1.png)
+
 Figure 2: Static IPv4 configuration for Host1
 
 IP forwarding was turned off because Host1 was behaving as an end host rather than a router.
@@ -92,6 +94,8 @@ gateway 10.1.1.1
 
 up sysctl net.ipv4.ip_forward=0
 
+![Network](./image/Week_5/Static_IPv4_configuration_for_Host2.png)
+
 Figure 3: Static IPv4 configuration for Host2
 
 ### Configuring Router1
@@ -109,6 +113,8 @@ IP forwarding was enabled with:
 
 up sysctl net.ipv4.ip_forward=1
 
+![Network](./image/Week_5/Router1_eth0_interface_configured_for_the_10_1_1_0_24_subnet.png)
+
 Figure 4: Router1 eth0 interface configured for the 10.1.1.0/24 subnet
 
 The second interface, eth1, was setup as follows.
@@ -117,6 +123,8 @@ auto eth1 
 iface eth1 inet static 
 address 10.1.2.1 
 netmask 255.255.255.0
+
+![Network](./image/Week_5/Router1_eth1_interface_configured_for_the_10_1_2_0_24_subnet.png)
 
 Figure 5: Router1 eth1 interface configured for the 10.1.2.0/24 subnet
 
@@ -139,6 +147,8 @@ netmask 255.255.255.0
 gateway 10.1.2.1
 
 up sysctl net.ipv4.ip_forward=0
+
+![Network](./image/Week_5/Static_IPv4_configuration_for_Host3.png)
 
 Figure 6: Static IPv4 configuration for Host3
 
@@ -167,6 +177,8 @@ and:
 
 net.ipv4.ip_forward=0
 
+![Network](./image/Week_5/Verification_of_Host1's_IPv4_address_and_forwarding_status.png)
+
 Figure 7: Verification of Host1's IPv4 address and forwarding status
 
 ### Host2 Verification
@@ -176,6 +188,8 @@ Host2 demonstrated:
 inet 10.1.1.3/24
 
 forwarding was disabled.
+
+![Network](./image/Week_5/Verification_of_Host2's_IPv4_configuration.png)
 
 Figure 8: Verification of Host2's IPv4 configuration
 
@@ -190,6 +204,8 @@ The router also displayed:
 
 net.ipv4.ip_forward=1
 
+![Network](./image/Week_5/Router1_interfaces_and_enabled_IPv4_forwarding.png)
+
 Figure 9: Router1 interfaces and enabled IPv4 forwarding
 
 This configuration is critical because the router must be able to receive an IP packet on one interface and route it through another.
@@ -203,6 +219,8 @@ inet 10.1.2.2/24
 and:
 
 net.ipv4.ip_forward=0
+
+![Network](./image/Week_5/Host3_IP_address_and_forwarding_configuration.png)
 
 Figure 10: Host3 IP address and forwarding configuration
 
@@ -219,6 +237,8 @@ The ping succeeded and returned:
 Three packets were sent.
 Received 3 packets with 0% loss.
 
+![Network](./image/Week_5/Successful_ping_from_a_host_on_the_10_1_1_0_24_subnet_to_a_host_on_the_10_1_2_0_24_subnet.png)
+
 Figure 11: Successful ping from a host on the 10.1.1.0/24 subnet to a host on the 10.1.2.0/24 subnet
 
 This indicated that Router1 had properly redirected traffic across the two networks.
@@ -233,6 +253,8 @@ On Router1, the routing table had two directly linked networks:
 
 10.1.1.0/24 dev eth0 scope link src 10.1.1.1
 10.1.2.0/24 dev eth1 scope link src 10.1.2.1
+
+![Network](./image/Week_5/Router1_routing_table_showing_its_two_directly_connected_subnets.png)
 
 Figure 12: Router1 routing table showing its two directly connected subnets
 
@@ -254,6 +276,8 @@ The provided network included:
 - FRR-4
 - NETem1
 - NETem2
+
+![Network](./image/Week_5/OSPF_topology_containing_four_FRR_routers_and_two_possible_paths_between_Host1_and_Host2.png)
 
 Figure 13: OSPF topology containing four FRR routers and two possible paths between Host1 and Host2
 
@@ -286,6 +310,8 @@ Host1 was setup as follows:
 
 10.10.1.101/24
 
+![Network](./image/Week_5/Host1_configured_on_the_10_10_1_0_24_network.png)
+
 Figure 14: Host1 configured on the 10.10.1.0/24 network
 
 ### Host2
@@ -293,6 +319,8 @@ Figure 14: Host1 configured on the 10.10.1.0/24 network
 Host 2 was configured with:
 
 10.10.6.102/24
+
+![Network](./image/Week_5/Host2_configured_on_the_10_10_6_0_24_network.png)
 
 Figure 15: Host2 configured on the 10.10.6.0/24 network\
 
@@ -310,6 +338,8 @@ The prompt changed to:
 
 frr#
 
+![Network](./image/Week_5/Accessing_the_FRRouting_command_line_interface_using_vtysh.png)
+
 Figure 16: Accessing the FRRouting command-line interface using vtysh
 
 The FRR interface supports routing-specific instructions that differ from regular Linux commands.
@@ -317,6 +347,8 @@ The FRR interface supports routing-specific instructions that differ from regula
 The CLI might be exited with:
 
 exit
+
+![Network](./image/Week_5/Exiting_the_FRRouting_command_line_environment.png)
 
 Figure 17: Exiting the FRRouting command-line environment
 
@@ -331,6 +363,8 @@ The output displayed:
 Five packets were sent.
 Received 5 packets with 0% loss.
 
+![Network](./image/Week_5/Successful_end_to_end_ping_between_Host1_and_Host2_through_the_routed_OSPF_network.png)
+
 Figure 18: Successful end-to-end ping between Host1 and Host2 through the routed OSPF network
 
 The answers displayed a TTL value of:
@@ -344,6 +378,8 @@ This indicates that the packets passed through many routers before reaching thei
 One of the most significant OSPF instructions utilised was:
 
 show ip ospf neighbor
+
+![Network](./image/Week_5/OSPF_neighbour_information_displayed_on_FRR_1.png)
 
 Figure 19: OSPF neighbour information displayed on FRR-1
 
@@ -368,6 +404,8 @@ This indicates that the OSPF neighbour relationships have been effectively forme
 The OSPF-specific routing table was shown using:
 
 show ip ospf route
+
+![Network](./image/Week_5/OSPF_network_routing_table_on_FRR_1.png)
 
 Figure 20: OSPF network routing table on FRR-1
 
@@ -403,6 +441,8 @@ The command:
 show ip route
 
 was used to display the whole routing table.
+
+![Network](./image/Week_5/Complete_FRR_routing_table.png)
 
 Figure 21: Complete FRR routing table
 
@@ -444,6 +484,8 @@ This proved that OSPF could retain many potential routes to a single distant des
 
 Another router's routing information was checked as well.
 
+![Network](./image/Week_5/Routing_table_from_another_FRR_router_in_the_OSPF_network_.png)
+
 Figure 22: Routing table from another FRR router in the OSPF network
 
 The router linked directly to networks and learnt routes dynamically.
@@ -467,6 +509,8 @@ and:
 
 show ip ospf route
 
+![Network](./image/Week_5/Comparison_between_the_full_routing_table_and_the_OSPF_specific_routing_information.png)
+
 Figure 23: Comparison between the full routing table and the OSPF-specific routing information
 
 show ip route presented the router's current routes, which included both connected and OSPF routes.
@@ -487,6 +531,8 @@ The original output displayed the path:
 10.10.2.2
 10.10.4.4
 10.10.6.102
+
+![Network](./image/Week_5/Initial_traceroute_showing_the_upper_OSPF_path_from_Host1_to_Host2.png)
 
 Figure 24: Initial traceroute showing the upper OSPF path from Host1 to Host2
 
@@ -523,6 +569,8 @@ After the path became unavailable, the updated traceroute indicated:
 10.10.3.3
 10.10.5.4
 10.10.6.102
+
+![Network](./image/Week_5/Traceroute_results_before_and_after_the_original_OSPF_path_became_unavailable.png)
 
 Figure 25: Traceroute results before and after the original OSPF path became unavailable
 
