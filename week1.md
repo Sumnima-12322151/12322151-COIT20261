@@ -36,5 +36,31 @@ This program displays the list of accessible network interfaces together with th
 
 Figure 2: Host1 console displaying its network interface and IP address
 
+Based on the console output, the eth0 interface was operational and had the following IPv4 address:
 
+192.168.0.42/24
 
+The /24 prefix denotes the subnet mask.
+
+255.255.255.0
+
+The console also displayed the loopback interface lo, which had the normal loopback address:
+
+127.0.0.1/8
+
+## What I Learned
+
+During this activity, I learned:
+- Create and manage a simple project in GNS3
+- Add a Linux host to your GNS3 topology
+- Starting and stopping network devices in GNS3
+- Enter the console of a Linux host
+- Use the standard Linux networking commands
+- Identify network interfaces like eth0 and lo
+- Check the IPv4 address associated with a network interface
+- Understand fundamental CIDR notation, such as /24
+- Take screenshots and use GitHub to document your networking activity
+
+## Conclusion
+
+The Week 1 exercise was an introduction to using GNS3 for network simulation. I successfully constructed a basic topology with one Linux server, entered its console, and confirmed that the eth0 interface was using the IP address 192.168.0.42/24. This practical practice helps to develop the fundamental GNS3 and Linux networking abilities necessary for the next networking exercises.
