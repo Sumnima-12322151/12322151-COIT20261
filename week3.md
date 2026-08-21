@@ -16,6 +16,8 @@ The primary activities achieved during this practical were:
 
 The network was made up of four Linux machines connected by a single Ethernet switch.
 
+![Network](./image/Week_3/Week_3_GNS3_network_topology_containing_Host1_Host2_Host3_Host4_and_Switch1.png)
+
 Figure 1: Week 3 GNS3 network topology containing Host1, Host2, Host3, Host4 and Switch1
 
 All four hosts connected to the Ethernet switch via their eth0 ports. The green lights indicate that the hosts and network connections were active.
@@ -31,6 +33,8 @@ Before testing application connectivity, I made sure the hosts could interact wi
 The following command was executed:
 
 ping -c 3 10.1.0.2
+
+![Network](./image/Week_3/Successful_ICMP_connectivity_test_from_Host1_to_Host2.png)
 
 Figure 2: Successful ICMP connectivity test from Host1 to Host2
 
@@ -50,6 +54,8 @@ Another connection test to Host2 was carried out using:
 
 ping -c 3 10.1.0.2
 
+![Network](./image/Week_3/Three_successful_ICMP_Echo_Requests_and_Replies_between_Host1_and_Host2.png)
+
 Figure 3: Three successful ICMP Echo Requests and Replies between Host1 and Host2
 
 All three packets were successfully received, with 0% packet loss.
@@ -59,6 +65,8 @@ All three packets were successfully received, with 0% packet loss.
 Connectivity to Host3 was checked using:
 
 ping -c 3 10.1.0.3
+
+![Network](./image/Week_3/Successful_ping_test_from_Host1_to_Host3.png)
 
 Figure 4: Successful ping test from Host1 to Host3
 
@@ -73,6 +81,8 @@ This validated the effective connectivity between Host1 and Host3.
 Host4 was also evaluated using:
 
 ping -c 3 10.1.0.4
+
+![Network](./image/Week_3/Successful_connectivity_test_between_Host1_and_Host4.png)
 
 Figure 5: Successful connectivity test between Host1 and Host4
 
@@ -105,6 +115,8 @@ The following choices were used:
 
 The server stayed open while waiting for another host to make a connection.
 
+![Network](./image/Week_3/Netcat_server_listening_for_a_connection_and_receiving_a_message.png)
+
 Figure 6: Netcat server listening for a connection and receiving a message
 
 ### Connecting the Netcat Client
@@ -121,6 +133,8 @@ Here:
 
 After the connection was established, text messages could be transmitted between the two hosts.
 
+![Network](./image/Week_3/Netcat_client_connected_to_the_server_at_10_1_0_1.png)
+
 Figure 7: Netcat client connected to the server at 10.1.0.1
 
 Text message with the name:
@@ -136,6 +150,8 @@ This indicated that the two Linux hosts communicated successfully at the applica
 Netcat supports two-way communication. As a result, information input on one host can be shown on another as long as the connection is operational.
 
 The screenshots show the exchange of text, including the student identity information.
+
+![Network](./image/Week_3/Netcat_session_showing_communication_between_the_client_and_server.png)
 
 Figure 8: Netcat session showing communication between the client and server
 
@@ -155,6 +171,8 @@ Ethernet
 
 A capture file was produced for the traffic that passed across the specified connection.
 
+![Network](./image/Week_3/Starting_an_Ethernet_packet_capture_on_the_link_between_Host1_and_Switch1.png)
+
 Figure 9: Starting an Ethernet packet capture on the link between Host1 and Switch1
 
 After the capture began, network traffic was created with commands like ping and Netcat.
@@ -172,6 +190,8 @@ Because the capture was operating on the link between Host1 and the switch, thes
 ### Viewing the Capture in Wireshark
 
 The collected traffic was opened in Wireshark.
+
+![Network](./image/Week_3/Captured_network_traffic_displayed_in_Wireshark.png)
 
 Figure 10: Captured network traffic displayed in Wireshark
 
