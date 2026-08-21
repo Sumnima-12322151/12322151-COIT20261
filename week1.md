@@ -7,14 +7,14 @@ This week's practical assignment was designed to familiarise students with GNS3'
 ## Tasks Completed
 
 During this practical session, I accomplished the following tasks:
-- Created a new project using the GNS3 Web Interface.
-- The network architecture has been updated with the addition of a Linux host (Host1).
-- Included an annotation with the unit title, name, and student ID.
-- Successfully started the Host1 node.
-- Accessed the Linux console on Host 1.
-- To see network interface details, I used the Linux command ip a.
-- Verified the IP address given to the eth0 interface.
-- Took screenshots of the GNS3 topology and the Host1 console to demonstrate that the task was complete.
+- Created a new project using the GNS3 Web Interface
+- The network architecture has been updated with the addition of a Linux host (Host1)
+- Included an annotation with the unit title, name, and student ID
+- Successfully started the Host1 node
+- Accessed the Linux console on Host 1
+- To see network interface details, I used the Linux command ip a
+- Verified the IP address given to the eth0 interface
+- Took screenshots of the GNS3 topology and the Host1 console to demonstrate that the task was complete
 
 ## GNS3 Network Topology
 
