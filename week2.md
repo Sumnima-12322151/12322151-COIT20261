@@ -26,6 +26,8 @@ Figure 1: Four Linux hosts and one Ethernet switch added to the GNS3 project
 
 The four hosts were then linked to the Ethernet switch via their respective eth0 ports. This resulted in a basic LAN in which all devices could interact via the switch.
 
+![Network](./image/Week_2/Completed_GNS3_LAN_topology_with_all_four_hosts_connected_to_Switch1.png)
+
 Figure 2: Completed GNS3 LAN topology with all four hosts connected to Switch1
 
 ### IP Addressing Scheme
@@ -58,6 +60,8 @@ iface eth0 inet static 
 address 10.1.1.1 
 netmask 255.255.255.0
 
+![Network](./image/Week_2/Static_IPv4_configuration_for_Host1_using_the_GNS3_network_configuration_window.png)
+
 Figure 3: Static IPv4 configuration for Host1 using the GNS3 network configuration window
 
 After launching the host, the IP address was verified using:
@@ -67,6 +71,8 @@ ip a
 The report indicated that the eth0 interface had successfully received:
 
 10.1.1.1/24
+
+![Network](./image/Week_2/Verification_of_Host1's_IP_address_using_the_ip_a_command.png)
 
 Figure 4: Verification of Host1's IP address using the ip a command
 
@@ -80,6 +86,8 @@ nano /etc/network/interfaces
 
 The static configuration has been entered into the file.
 
+![Network](./image/Week_2/Editing_the_etc_network_interfaces_file_using_the_Nano_text_editor.png)
+
 Figure 5: Editing the /etc/network/interfaces file using the Nano text editor
 
 For Host3, the IP address was set as follows:
@@ -88,6 +96,8 @@ auto eth0
 iface eth0 inet static 
 address 10.1.1.3 
 netmask 255.255.255.0
+
+![Network](./image/Week_2/Configuring_Host3_with_the_static_IPv4_address_10_1_1_3.png)
 
 Figure 6: Configuring Host3 with the static IPv4 address 10.1.1.3
 
@@ -103,6 +113,8 @@ ip a
 The result verified that Host3 was using:
 
 10.1.1.3/24
+
+![Network](./image/Week_2/Host3_console_showing_the_configured_10_1_1_3_24_address.png)
 
 Figure 7: Host3 console showing the configured 10.1.1.3/24 address
 
@@ -120,6 +132,8 @@ The output displayed:
 
 10.1.1.4/24
 
+![Network](./image/Week_2/Host4_configured_with_10_1_1_4_24_using_the_Linux_ip_command.png)
+
 Figure 8: Host4 configured with 10.1.1.4/24 using the Linux ip command
 
 This approach assigns the IP address immediately. However, unlike the /etc/network/interfaces technique, the configuration is not generally saved when the device is restarted.
@@ -135,6 +149,8 @@ From Host 1, I checked connection to Host 2 using:
 ping 10.1.1.2
 
 The host successfully received ICMP responses from 10.1.1.2.
+
+![Network](./image/Week_2/Successful_ping_from_Host1_to_Host2.png)
 
 Figure 9: Successful ping from Host1 to Host2
 
@@ -158,6 +174,8 @@ The results returned:
 
 The destination host is not accessible.
 
+![Network](./image/Week_2/Ping_test_to_an_unavailable_IP_address.png)
+
 Figure 10: Ping test to an unavailable IP address
 
 Statistics showed:
@@ -176,6 +194,8 @@ The -c option was used to restrict the amount of ICMP echo requests.
 
 ping -c 3 10.1.1.2
 
+![Network](./image/Week_2/Ping_test_limited_to_three_packets.png)
+
 Figure 11: Ping test limited to three packets
 
 The results showed:
@@ -190,6 +210,8 @@ The interval between packets was modified using the -i option.
 
 ping -i 10.1.1.2
 
+![Network](./image/Week_2/Ping_test_using_a_modified_transmission_interval.png)
+
 Figure 12: Ping test using a modified transmission interval
 
 The -i 10 option forced the host to wait around ten seconds between ICMP echo queries.
@@ -199,6 +221,8 @@ The -i 10 option forced the host to wait around ten seconds between ICMP echo qu
 The quantity of data transmitted in each ping packet was changed as follows:
 
 ping -s 100 10.1.1.2
+
+![Network](./image/Week_2/Ping_test_using_a_data_size_of_100_bytes.png)
 
 Figure 13: Ping test using a data size of 100 bytes
 
@@ -213,6 +237,8 @@ This is due to the inclusion of extra ICMP-related information together with the
 Finally, many choices were consolidated into a single command:
 
 ping -s 100 -c 3 -i 2 10.1.1.2
+
+![Network](./image/Week_2/Ping_test_using_packet_size_count_and_interval_options_together.png)
 
 Figure 14: Ping test using packet size, count, and interval options together
 
