@@ -27,6 +27,8 @@ The GNS3 topology consisted of:
 - Switch3
 - Server1 – HTTP server
 
+![Network](./image/Week_4/GNS3_topology_used_for_the_Week_4_HTTP_client_activity.png)
+
 Figure 1: GNS3 topology used for the Week 4 HTTP client activity
 
 The logical communication pathway was:
@@ -64,6 +66,8 @@ ip addr
 
 was used to verify the interfaces set on Router1.
 
+![Network](./image/Week_4/IPv4_configuration_of_Router1.png)
+
 Figure 2: IPv4 configuration of Router1
 
 Router1 has two active IPv4 interfaces:
@@ -79,6 +83,8 @@ The following command was executed:
 
 ip route
 
+![Network](./image/Week_4/Routing_table_of_Router1.png)
+
 Figure 3: Routing table of Router1
 
 The result displayed two directly linked networks:
@@ -93,6 +99,8 @@ This meant that Router1 could immediately connect to Subnet A and Subnet B via t
 The routing table of Router 2 was examined using:
 
 ip route
+
+![Network](./image/Week_4/Routing_table_of_Router2.png)
 
 Figure 4: Routing table of Router2
 
@@ -111,6 +119,8 @@ ip addr
 
 was also utilised to validate the Router2 interfaces.
 
+![Network](./image/Week_4/IPv4_interfaces_configured_on_Router2.png)
+
 Figure 5: IPv4 interfaces configured on Router2
 
 Important addresses were:
@@ -126,11 +136,15 @@ The end host on Subnet C was setup as follows:
 
 192.168.30.10/24
 
+![Network](./image/Week_4/IPv4_configuration_of_the_host_on_Subnet_C.png)
+
 Figure 6: IPv4 configuration of the host on Subnet C
 
 The routing table was verified using:
 
 ip route
+
+![Network](./image/Week_4/Host_routing_table_showing_its_default_gateway.png)
 
 Figure 7: Host routing table showing its default gateway
 
@@ -155,6 +169,8 @@ The command used by Router1 was:
 
 ping -c 5 192.168.20.2
 
+![Network](./image/Week_4/Successful_connectivity_test_between_Router1_and_Router2.png)
+
 Figure 8: Successful connectivity test between Router1 and Router2
 
 The results showed:
@@ -169,6 +185,8 @@ The server interface was tested with:
 
 ip addr
 
+![Network](./image/Week_4/Server1_network_interface_information.png)
+
 Figure 9: Server1 network interface information
 
 Checking the server address was critical since the HTTP client had to use the proper server IP address when requesting the webpage.
@@ -180,6 +198,8 @@ Host1 ran a graphical Firefox environment and was accessible using the GNS3 VNC/
 Within Host1, a terminal was opened and the network setup was examined using:
 
 ip addr
+
+![Network](./image/Week_4/Firefox_Host1_accessed_through_the_graphical_environment.png)
 
 Figure 10: Firefox Host1 accessed through the graphical environment
 
@@ -222,6 +242,8 @@ Because Host1 and Server1 were on different networks, both routing and proper ga
 Packet capture was carried out in GNS3, and the resulting.pcap files were examined in Wireshark.
 
 ### First Packet Capture
+
+![Network](./image/Week_4/Wireshark_capture_showing_TCP_ARP_and_ICMP_traffic.png)
 
 Figure 11: Wireshark capture showing TCP, ARP and ICMP traffic
 
@@ -278,6 +300,8 @@ Echo (ping) request
 This indicated that ICMP was also utilised to test connection between the devices.
 
 ## Second Packet Capture
+
+![Network](./image/Week_4/Additional_Wireshark_packet_capture.png)
 
 Figure 12: Additional Wireshark packet capture
 
